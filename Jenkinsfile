@@ -9,7 +9,7 @@ node {
             //get maven home
             def mvnHome=tool name: 'maven system' ,type: 'maven'
 //             bat "set JAVA_HOME='C:\\Program Files\\Java\\jdk-11.0.2\'"
-            bat "set JAVA_HOME='C:\\Program Files\Java\\jre1.8.0_281'"
+            bat "set JAVA_HOME='C:\\Program Files\\Java\\jre1.8.0_281'"
         }
         stage('maven packaging'){
 //          bat "setx PATH "%PATH%;%JAVA_HOME%\bin""
