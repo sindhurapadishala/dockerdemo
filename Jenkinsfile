@@ -5,11 +5,11 @@ node {
         stage('Copy git file') {
                 git "https://github.com/sindhurapadishala/dockerdemo.git"
         }
-        stage('compile-create-war-file'){
-            //get maven home
-            def mvnHome=tool name: 'maven system' ,type: 'maven'
-            bat "mvn package"
-        }
+//         stage('compile-create-war-file'){
+//             //get maven home
+//             def mvnHome=tool name: 'maven system' ,type: 'maven'
+//             bat "mvn package"
+//         }
         stage('Deploy to tomcat'){
             bat "copy target\\docker_demo-0.0.1-SNAPSHOT.war \"${tomcatWeb}\\docker_demo-0.0.1-SNAPSHOT.war\""
         }
