@@ -9,8 +9,13 @@ node {
             //get maven home
             def mvnHome=tool name: 'maven system' ,type: 'maven'
             bat "set JAVA_HOME='C:\\Program Files\\Java\\jdk-11.0.2'"
-            bat "setx PATH "%PATH%;%JAVA_HOME%\bin""
+            }
+            stage('intermediate'){
+//             bat "setx PATH "%PATH%;%JAVA_HOME%\bin""
             bat "mvn package"
+            }
+
+            
         }
         stage('Deploy to tomcat'){
             bat "copy target\\tommy_new.war \"${tomcatWeb}\\tommy_new.war\""
