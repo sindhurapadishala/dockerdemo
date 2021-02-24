@@ -11,7 +11,7 @@ node {
 //             bat "mvn package"
 //         }
         stage('Deploy to tomcat'){
-            bat "copy target\\docker_demo-0.0.1-SNAPSHOT.war \"${tomcatWeb}\\docker_demo-0.0.1-SNAPSHOT.war\""
+            bat "copy target\\tommy_new.war \"${tomcatWeb}\\tommy_new.war\""
         }
         stage('start tomcat server'){
             sleep(time:5,unit:"SECONDS")
