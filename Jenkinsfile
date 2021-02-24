@@ -1,7 +1,7 @@
 node {
 
-    def tomcatWeb='C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps'
-    def tomcatBin='C:\Program Files\Apache Software Foundation\Tomcat 8.5\bin'
+    def tomcatWeb='C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps'
+    def tomcatBin='C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\bin'
         stage('Copy git file') {
                 git "https://github.com/sindhurapadishala/dockerdemo.git"
         }
