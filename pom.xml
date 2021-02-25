@@ -51,6 +51,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>assignment</finalName>
 	</build>
 
 </project>
