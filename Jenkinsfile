@@ -2,6 +2,7 @@ node {
 
     def tomcatWeb='C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps'
     def tomcatBin='C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\bin'
+
         stage('Copy git file') {
                 git "https://github.com/sindhurapadishala/dockerdemo.git"
         }
@@ -15,9 +16,7 @@ node {
         }
         stage('start tomcat server'){
             sleep(time:5,unit:"SECONDS")
-
-            bat "cd C:\\"
-            bat "cd 'Program Files\\Apache Software Foundation\\Tomcat 8.5\\bin'"
+            bat "cd ${tomcatBin}"
             bat "startup.bat"
             sleep(time:100,unit:"SECONDS")
         }
