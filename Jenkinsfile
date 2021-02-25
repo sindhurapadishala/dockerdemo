@@ -18,7 +18,6 @@ node {
 
             bat "cd C:\\"
             bat "cd 'Program Files\\Apache Software Foundation\\Tomcat 8.5\\bin'"
-            C:\Program Files\Apache Software Foundation\Tomcat 8.5\bin
             bat "startup.bat"
             sleep(time:100,unit:"SECONDS")
         }
